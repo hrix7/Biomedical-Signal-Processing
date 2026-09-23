@@ -1,30 +1,44 @@
 # Biomedical Signal Processing
 
-A collection of clear, reusable signal-processing examples for physiological and wearable data.
+I use this repository to organize the signal-processing methods behind my wearable and physiological-monitoring work. It includes practical code for PPG heart-rate estimation, step-related signals, and sleep/social-jet-lag calculations.
 
-## Planned modules
+## Work represented here
 
-- PPG filtering and heart-rate estimation
-- Step detection and activity features
-- Sleep timing and social jet lag
-- EEG/HRV feature exploration
-- Filtering, quality checks, and visualization
+- Filtered PPG signals and detected pulse peaks for heart-rate estimation.
+- Processed acceleration signals for candidate step detection.
+- Reviewed EEG and heart-rate-variability concepts through research-volunteer work.
+- Analyzed sleep timing and the difference between workday and free-day sleep schedules.
+- Structured reusable checks for sampling rate, signal duration, missing data, and physiological plausibility.
 
-## Included example
+## Repository code
 
-`src/ppg_heart_rate.py` applies a band-pass filter and detects candidate systolic peaks. Use synthetic or permission-cleared signals only.
+- `src/ppg_heart_rate.py` band-pass filters PPG, detects peaks, and estimates beats per minute.
+- `src/social_jetlag.py` calculates midsleep on workdays/free days and their circular time difference.
+- `docs/SIGNAL_CHECKLIST.md` records the signal-quality checks I use before interpreting outputs.
+- `examples/README.md` explains the expected input formats.
+
+## Run the tools
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python src/ppg_heart_rate.py examples/synthetic_ppg.csv --sample-rate 50
+python -m pip install -r requirements.txt
+python src/ppg_heart_rate.py ppg.csv --sample-rate 100
+python src/social_jetlag.py sleep.csv
 ```
 
-## Research boundary
+For the sleep tool, use columns `day_type`, `sleep_onset`, and `wake_time`, with time values in `HH:MM` format.
 
-Outputs are exploratory and are not validated clinical measurements.
+## Tools
 
-## License
+Python, MATLAB, NumPy, pandas, SciPy, filtering, peak detection, PPG, EEG/HRV concepts, sleep and circadian analysis.
 
-MIT.
+## Scope
+
+The scripts are educational analysis tools. They do not provide medical diagnoses and should not be used for clinical decisions without appropriate validation.
+
+## Author
+
+Hritika Adhikary - M.S. Biomedical Engineering, Arizona State University.
+
+## Rights
+
+Copyright (c) 2026 Hritika Adhikary. All rights reserved. See [LICENSE](LICENSE).
