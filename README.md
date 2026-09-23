@@ -37,10 +37,10 @@ The scripts are educational analysis tools. They do not provide medical diagnose
 
 ## Author and Project Setting
 
-**Hritika Adhikary**  
-Graduate Biomedical Signal Processing and Wearables Work  
-Arizona State University  
-2025
+**Author:** Hritika Adhikary  
+**Project:** Graduate Biomedical Signal Processing and Wearables Work  
+**Institution:** Arizona State University  
+**Period:** 2025
 
 ## Rights
 
