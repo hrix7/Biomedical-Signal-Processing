@@ -35,9 +35,12 @@ Python, MATLAB, NumPy, pandas, SciPy, filtering, peak detection, PPG, EEG/HRV co
 
 The scripts are educational analysis tools. They do not provide medical diagnoses and should not be used for clinical decisions without appropriate validation.
 
-## Author
+## Author and Project Setting
 
-Hritika Adhikary - M.S. Biomedical Engineering, Arizona State University.
+**Hritika Adhikary**  
+Graduate Biomedical Signal Processing and Wearables Work  
+Arizona State University  
+2025
 
 ## Rights
 
